@@ -1,0 +1,32 @@
+<div class="navbar is-fixed-top">
+  <div class="navbar-brand">
+    <a href="/" class="navbar-item">Ascytra</a>
+
+    <a
+      role="button"
+      class="navbar-burger burger"
+      aria-label="menu"
+      aria-expanded="false"
+      data-target="header-menu"
+      [class.is-active]="isMenuOpen"
+      (click)="toggleMenu()"
+    >
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div [class.is-active]="isMenuOpen" id="header-menu" class="navbar-menu">
+    <div class="navbar-end">
+      <a
+        *ngFor="let menuItem of menuItemsList"
+        [href]="menuItem.href"
+        [target]="menuItem.target"
+        class="navbar-item"
+      >
+        {{ menuItem.label }}
+      </a>
+    </div>
+  </div>
+</div>
