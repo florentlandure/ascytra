@@ -7,18 +7,20 @@ export const MENU_ITEMS_LIST: IMenuItem[] = [
     target: '_self',
   },
   {
-    label: 'About me',
-    href: '/about',
+    label: 'Articles',
+    href: '/articles',
     target: '_self',
   },
   {
     label: 'Github',
     href: 'https://github.com/florentlandure',
     target: '_blank',
+    icon: 'github',
   },
   {
-    label: 'LinkedIn',
+    label: 'Twitter',
     href: 'http://linkedin.com/in/florent-landuré-060808b2',
     target: '_blank',
+    icon: 'twitter',
   },
 ];

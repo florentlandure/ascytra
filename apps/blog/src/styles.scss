@@ -1,2 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
-@import 'bulma/bulma.sass';
+// Bulma overrides
+$family-sans-serif: 'Raleway', -apple-system, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  'Helvetica', 'Arial', sans-serif;
+@import 'bulma/bulma';
+@import 'animate.css/animate.min.css';
+
+.fa {
+  &-js-square {
+    color: #f0db4f;
+  }
+  &-angular {
+    color: #b52e31;
+  }
+  &-node-js {
+    color: #68a063;
+  }
+}
