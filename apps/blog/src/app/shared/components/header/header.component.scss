@@ -1,5 +1,36 @@
 :host {
   .navbar {
-    background: none;
+    .navbar-brand .navbar-item {
+      background: none;
+    }
+
+    .navbar-menu {
+      .navbar-item {
+        position: relative;
+
+        &:after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          width: 80%;
+          height: 5px;
+          transition: opacity 0.4s;
+          opacity: 0;
+          background: currentColor;
+          transform: translateX(-50%);
+        }
+
+        &:hover:after {
+          @media screen and (min-width: 1024px) {
+            opacity: 1;
+          }
+        }
+
+        @media screen and (min-width: 1024px) {
+          background: none;
+        }
+      }
+    }
   }
 }

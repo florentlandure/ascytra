@@ -2,7 +2,11 @@
   margin-top: -52px;
   display: block;
 
-  .hero-foot {
-    padding-bottom: 2rem;
+  .title {
+    font-size: 6rem;
+  }
+
+  .animate__animated.animate__fadeInUp {
+    animation-delay: 1.2s;
   }
 }

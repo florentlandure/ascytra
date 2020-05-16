@@ -4,23 +4,23 @@ export const MENU_ITEMS_LIST: IMenuItem[] = [
   {
     label: 'Home',
     href: '/',
-    target: '_self',
+    isExternal: false,
   },
   {
     label: 'Articles',
     href: '/articles',
-    target: '_self',
+    isExternal: false,
   },
   {
     label: 'Github',
     href: 'https://github.com/florentlandure',
-    target: '_blank',
-    icon: 'github',
+    icon: 'fab fa-github',
+    isExternal: true,
   },
   {
     label: 'Twitter',
-    href: 'http://linkedin.com/in/florent-landuré-060808b2',
-    target: '_blank',
-    icon: 'twitter',
+    href: 'https://twitter.com/Ascytra',
+    icon: 'fab fa-twitter',
+    isExternal: true,
   },
 ];

@@ -1,54 +1,56 @@
-<section class="section">
+<section class="section is-medium">
   <div class="container">
-    <h1 class="title is-1 has-text-centered">
+    <h1 class="title is-size-1">
       About me
     </h1>
+    <br />
 
-    <section class="section is-medium">
-      <h2 class="title is-2">Web development</h2>
-      <br />
-
-      <div class="columns is-size-5 is-vcentered">
-        <div class="column">
-          <div class="columns is-vcentered has-text-centered">
-            <i class="fab fa-js-square column medium-icon"></i>
-            <i class="fab fa-angular column medium-icon"></i>
-            <i class="fab fa-node-js column medium-icon"></i>
-          </div>
-        </div>
-
-        <div class="column content">
-          <p>
-            My name is Florent Landuré (aka Ascytra), I am a French web
-            developer. I currently work at Solocal as a Frontend developer. The
-            technologies I use are mainly Angular, Ionic and NodeJS. I love
-            Typescript and use it on all of my projects !
-          </p>
+    <div class="columns is-vcentered">
+      <div class="column content is-8">
+        <p>
+          My name is Florent Landuré (aka Ascytra), I am a French web developer.
+          I currently work at Solocal as a Frontend developer. The technologies
+          I mainly use are Angular, Ionic and NodeJS. I love Typescript and use
+          it on all of my projects!
+        </p>
+      </div>
+    </div>
+    <br />
+    <div class="columns">
+      <div class="column is-half is-offset-one-quarter">
+        <div class="columns is-vcentered has-text-centered">
+          <i class="fab fa-js-square column medium-icon"></i>
+          <i class="fab fa-angular column medium-icon"></i>
+          <i class="fab fa-node-js column medium-icon"></i>
         </div>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
-    <section class="section is-medium">
-      <h2 class="title is-2">Hobbies</h2>
-      <br />
-      <div class="columns is-size-5 is-vcentered">
-        <div class="column content">
-          <p>
-            In my spare time I like to play video games with my friends. The
-            games I currently play are :
-          </p>
-          <ul>
-            <li>World of Warcraft</li>
-            <li>Rocket League</li>
-            <li>League Of Legends</li>
-          </ul>
-          <p>I also love to go to esports events.</p>
-        </div>
+<section class="section is-medium has-background-primary has-text-white">
+  <div class="container">
+    <h1 class="title has-text-white is-size-1">I also love esports!</h1>
+    <br />
+    <div class="content">
+      <p class="is-size-4">
+        World of Warcraft, Rocket League and League Of Legends tournaments are a
+        lot of fun to watch on stream and even more fun in stadiums!
+      </p>
+    </div>
+  </div>
+</section>
 
-        <div class="column has-text-centered">
-          <i class="fas fa-gamepad" style="font-size: 10rem;"></i>
-        </div>
-      </div>
-    </section>
+<section class="section is-medium">
+  <div class="container">
+    <h1 class="title is-size-1">Catch me on social media</h1>
+    <br />
+    <div class="content">
+      <p class="is-size-4">
+        You can find me on
+        <a [href]="twitterUrl" target="_blank">Twitter</a> and
+        <a [href]="githubUrl" target="_blank">Github</a>
+      </p>
+    </div>
   </div>
 </section>

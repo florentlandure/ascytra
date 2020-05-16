@@ -1,34 +1,56 @@
-<div class="navbar is-dark">
-  <div class="navbar-brand">
-    <a href="/" class="navbar-item">
-      <img src="assets/images/ascytra-logo.png" alt="Ascytra" />
-    </a>
-
-    <a
-      role="button"
-      class="navbar-burger burger"
-      aria-label="menu"
-      aria-expanded="false"
-      data-target="header-menu"
-      [class.is-active]="isMenuOpen"
-      (click)="toggleMenu()"
-    >
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-
-  <div [class.is-active]="isMenuOpen" id="header-menu" class="navbar-menu">
-    <div class="navbar-end">
-      <a
-        *ngFor="let menuItem of menuItemsList"
-        [href]="menuItem.href"
-        [target]="menuItem.target"
-        class="navbar-item"
-      >
-        {{ menuItem.label }}
+<div class="navbar is-primary">
+  <div class="container">
+    <div class="navbar-brand">
+      <a href="/" class="navbar-item">
+        <img src="assets/images/ascytra-logo-white.png" alt="Ascytra" />
       </a>
+
+      <a
+        role="button"
+        class="navbar-burger burger"
+        aria-label="menu"
+        aria-expanded="false"
+        data-target="header-menu"
+        [class.is-active]="isMenuOpen"
+        (click)="toggleMenu()"
+      >
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div [class.is-active]="isMenuOpen" id="header-menu" class="navbar-menu">
+      <div class="navbar-end">
+        <ng-container *ngFor="let menuItem of menuItemsList">
+          <a
+            class="navbar-item"
+            *ngIf="menuItem.isExternal; else internalLink"
+            [href]="menuItem.href"
+            target="_blank"
+          >
+            <i
+              *ngIf="menuItem.icon; else externalLinkLabel"
+              [ngClass]="menuItem.icon"
+            ></i>
+            <ng-template #externalLinkLabel>
+              {{ menuItem.label }}
+            </ng-template>
+          </a>
+
+          <ng-template #internalLink>
+            <a class="navbar-item" [routerLink]="menuItem.href">
+              <i
+                *ngIf="menuItem.icon; else internalLinkLabel"
+                [ngClass]="menuItem.icon"
+              ></i>
+              <ng-template #internalLinkLabel>
+                {{ menuItem.label }}
+              </ng-template>
+            </a>
+          </ng-template>
+        </ng-container>
+      </div>
     </div>
   </div>
 </div>
